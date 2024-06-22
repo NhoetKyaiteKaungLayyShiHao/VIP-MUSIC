@@ -31,7 +31,7 @@ EXTRA_PLUGINS = getenv(
 
 EXTRA_PLUGINS_REPO = getenv(
     "EXTRA_PLUGINS_REPO",
-    "https://github.com/Zenaku2050s/ZenakuX-Music-Plugin",
+    "https://github.com/NhoetKyaiteKaungLayyShiHao/VIP-MUSIC-PLUGIN",
 )
 # Fill here the external plugins repo where plugins that you want to load
 
@@ -55,7 +55,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Zenaku2050s/ZenakuX-Music",
+    "https://github.com/NhoetKyaiteKaungLayyShiHao/VIP-MUSIC",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
