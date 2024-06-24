@@ -1,4 +1,0 @@
-version: "10"
-services:
-  app:
-    build: .
