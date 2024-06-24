@@ -6,7 +6,7 @@
     "python3",
     "telegram",
     "bot",
-    "VIP",
+    "NhoeKyaiteKaungLayy",
     "MusicBot",
     "telegram-bot",
     "pyrogram"
@@ -44,7 +44,7 @@
       },
       "STRING_SESSION": {
         "description": "A Pyrogram v2 String Session from @StringFatherBot on Telegram. . ",
-        "value": "BQGvBw8Awf9EEUMgjaE7J3p3Yr-R6pXOg0IJx9yC01SZvKNmR8-sP3EaXR4LZaD2YYt4eqjqEI5J23mWk6kTaM_plhSNJLLsaxAQTcLlCL_PDMSuSZ3cxejIUvgE0FxgejVw0T-lNSbgZX__AbXxwAtOuF0p_JdKH04YOjUi_yGnu5xvkpB3o2P0fzFcmX99IUMXzzZEZo9OFbr3_DXcHq-Nr55UJ0v4NgrpGAWhdnbahyOBmGqX4zn7o7auQGxsQ7AFNcFcKkRWoisVCnkw4g7_1K7cVrvTCppmHwtnWQe8I-LmEQm-gckDU7ApKELeKZfzYd6Ucx5ot7KQAVNTOmp7dv5ebgAAAAFjV-s3AA",
+        "value": "",
         "required": true
       },
       "HEROKU_API_KEY": {
