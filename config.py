@@ -42,7 +42,7 @@ EXTRA_PLUGINS_FOLDER = getenv("EXTRA_PLUGINS_FOLDER", "plugins")
 
 
 LOGGER_ID = int(getenv("LOGGER_ID"))
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002016915736"))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002020845157"))
 
 # Get this value from  on Telegram by /id
 OWNER_ID = int(getenv("OWNER_ID"))
@@ -62,8 +62,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/NhoetKyaiteKaungLayy_20")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/NhoetKyaiteKaungLayy_10")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/seriousvs_version10")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/seriousvs_version20")
 
 # Maximum Limit Allowed for users to save playlists on bot's server
 SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "100"))
@@ -124,13 +124,6 @@ STRING4 = getenv("STRING_SESSION4", None)
 STRING5 = getenv("STRING_SESSION5", None)
 
 
-#    __      _______ _____    ___  __ _    _  _____ _____ _____   _____
-#    \ \    / /_   _|  __ \   |  \/  | |  | |/ ____|_   _/ ____|  |  _ \ / __ \__   __|
-#     \ \  / /  | | | |__) |  | \  / | |  | | (___   | || |       | |_) | |  | | | |
-#      \ \/ /   | | |  ___/   | |\/| | |  | |\___ \  | || |       |  _ <| |  | | | |
-#       \  /   _| |_| |       | |  | | |__| |____) |_| || |____   | |_) | |__| | | |
-#        \/   |_____|_|       |_|  |_|\____/|_____/|_____\_____|  |____/ \____/  |_|
-
 
 BANNED_USERS = filters.user()
 adminlist = {}
@@ -145,21 +138,21 @@ clean = {}
 autoclean = []
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://te.legra.ph/file/e69ee26e970b904123dba.jpg"
+    "START_IMG_URL", "https://telegra.ph/file/6f789187da9573c7eb5c3.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://te.legra.ph/file/e69ee26e970b904123dba.jpg"
+    "PING_IMG_URL", "https://telegra.ph/file/6f789187da9573c7eb5c3.jpg"
 )
-PLAYLIST_IMG_URL = "https://te.legra.ph/file/e69ee26e970b904123dba.jpg"
-STATS_IMG_URL = "https://te.legra.ph/file/e69ee26e970b904123dba.jpg"
-TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/e69ee26e970b904123dba.jpg"
-TELEGRAM_VIDEO_URL = "https://te.legra.ph/file/e69ee26e970b904123dba.jpg"
-STREAM_IMG_URL = "https://te.legra.ph/file/e69ee26e970b904123dba.jpg"
-SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/e69ee26e970b904123dba.jpg"
-YOUTUBE_IMG_URL = "https://te.legra.ph/file/e69ee26e970b904123dba.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/e69ee26e970b904123dba.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/e69ee26e970b904123dba.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/e69ee26e970b904123dba.jpg"
+PLAYLIST_IMG_URL = "https://telegra.ph/file/6f789187da9573c7eb5c3.jpg"
+STATS_IMG_URL = "https://telegra.ph/file/6f789187da9573c7eb5c3.jpg"
+TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/ec58946508f8746ea136b.jpg"
+TELEGRAM_VIDEO_URL = "https://te.legra.ph/file/ec58946508f8746ea136b.jpg"
+STREAM_IMG_URL = "https://te.legra.ph/file/ec58946508f8746ea136b.jpg"
+SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/ec58946508f8746ea136b.jpg"
+YOUTUBE_IMG_URL = "https://te.legra.ph/file/ec58946508f8746ea136b.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/ec58946508f8746ea136b.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/ec58946508f8746ea136b.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/ec58946508f8746ea136b.jpg"
 
 
 def time_to_seconds(time):
