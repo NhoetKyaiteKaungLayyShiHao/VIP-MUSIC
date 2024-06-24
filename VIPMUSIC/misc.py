@@ -60,7 +60,7 @@ async def sudo():
     if sudoers:
         for user_id in sudoers:
             SUDOERS.add(user_id)
-    LOGGER(__name__).info(f"📡𝐎𝐰𝐧𝐞𝐫 + 𝐒𝐮𝐝𝐨 𝐔𝐬𝐞𝐫𝐬 𝐋𝐨𝐚𝐝𝐞𝐝...")
+    LOGGER(__name__).info(f"🍂နို့ကြိုက်ကောင်လေး................")
 
 
 def heroku():
