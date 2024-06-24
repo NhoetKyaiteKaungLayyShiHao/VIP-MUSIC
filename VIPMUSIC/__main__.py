@@ -49,21 +49,21 @@ async def init():
             if hasattr(imported_module, "__HELP__") and imported_module.__HELP__:
                 HELPABLE[imported_module.__MODULE__.lower()] = imported_module
 
-    LOGGER("VIPMUSIC.plugins").info("𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...")
+    LOGGER("VIPMUSIC.plugins").info("အရာအားလုံးအဆင်ပြေသည်...")
 
     await userbot.start()
 
     await VIP.start()
     await VIP.decorators()
     await restart_bots()
-    LOGGER("VIPMUSIC").info("╔═════ஜ۩۞۩ஜ════╗\n  ♨️𝗠𝗔𝗗𝗘 𝗕𝗬 𝗩𝗜𝗣 𝗕𝗢𝗬♨️\n╚═════ஜ۩۞۩ஜ════╝")
+    LOGGER("VIPMUSIC").info(".........Made By Nhoe Kyaite Kaung Layy...........")
     await idle()
 
     await app.stop()
     await userbot.stop()
 
     LOGGER("VIPMUSIC").info(
-        "                 ╔═════ஜ۩۞۩ஜ════╗\n  ♨️𝗠𝗔𝗗𝗘 𝗕𝗬 𝗩𝗜𝗣 𝗕𝗢𝗬♨️\n╚═════ஜ۩۞۩ஜ════╝"
+        "................Made By Nhoe Kyaite Kaung Layy................"
     )
 
 
