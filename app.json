@@ -1,7 +1,7 @@
 {
     "name": "ꜱᴀꜱᴜᴋᴇ ✘ ᴍᴜꜱɪᴄ",
     "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://te.legra.ph/file/e69ee26e970b904123dba.jpg",
+    "logo": "https://te.legra.ph/file/ec58946508f8746ea136b.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -44,7 +44,7 @@
       },
       "STRING_SESSION": {
         "description": "A Pyrogram v2 String Session from @StringFatherBot on Telegram. . ",
-        "value": "BQGXyHkAAGY5YMD_C4VHVinC_LvWisSC-KufSD7Z1F9HmdYDeZK6GurplkTCqyB1lvJ5_PdP1hdfpEsZT7SmIIRKbd9gHxzKLpqy8q6cU_9mD2mt1FbB5s2_hfjqggxeKT67Q3k8OnMbWIN1aoX2z1z9lJL6EB7tTJP7sI5eBAjKt5eiBj1Upzx46ndTnD_f0Y8RtYlTsGPD9zDPOLhKQiGHKMBxoqy4R7Avu9C_M0g7DyZC5yiLIeinp5V8vaaTu-qRCrukPDBq-0Wd7eWS31IsUE2Q8wLIvP_Os7-MPdk8BWbAZC_PfaRzvo-pEwZBiADrIUtwqqvBi-cuL6oHLr3IduP2NgAAAAFMhavJAA",
+        "value": "BQGvBw8Awf9EEUMgjaE7J3p3Yr-R6pXOg0IJx9yC01SZvKNmR8-sP3EaXR4LZaD2YYt4eqjqEI5J23mWk6kTaM_plhSNJLLsaxAQTcLlCL_PDMSuSZ3cxejIUvgE0FxgejVw0T-lNSbgZX__AbXxwAtOuF0p_JdKH04YOjUi_yGnu5xvkpB3o2P0fzFcmX99IUMXzzZEZo9OFbr3_DXcHq-Nr55UJ0v4NgrpGAWhdnbahyOBmGqX4zn7o7auQGxsQ7AFNcFcKkRWoisVCnkw4g7_1K7cVrvTCppmHwtnWQe8I-LmEQm-gckDU7ApKELeKZfzYd6Ucx5ot7KQAVNTOmp7dv5ebgAAAAFjV-s3AA",
         "required": true
       },
       "HEROKU_API_KEY": {
@@ -69,12 +69,12 @@
       },
       "START_IMG_URL": {
         "description": "Fill your start img- t.me/vTelegraphBot",
-        "value": "https://te.legra.ph/file/e69ee26e970b904123dba.jpg",
+        "value": "https://te.legra.ph/file/6f789187da9573c7eb5c3.jpg",
         "required": false
       },
       "LOGGER_ID": {
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
-        "value": "-1002016915736",
+        "value": "-1002020845157",
         "required": true
       }
     },
