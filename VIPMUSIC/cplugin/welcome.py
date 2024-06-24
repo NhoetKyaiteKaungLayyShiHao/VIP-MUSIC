@@ -5,11 +5,11 @@ from pyrogram import Client, enums, filters
 from pyrogram.types import ChatMemberUpdated, InlineKeyboardButton, InlineKeyboardMarkup
 
 random_photo = [
-    "https://telegra.ph/file/1949480f01355b4e87d26.jpg",
-    "https://telegra.ph/file/3ef2cc0ad2bc548bafb30.jpg",
-    "https://telegra.ph/file/a7d663cd2de689b811729.jpg",
-    "https://telegra.ph/file/6f19dc23847f5b005e922.jpg",
-    "https://telegra.ph/file/2973150dd62fd27a3a6ba.jpg",
+    "https://telegra.ph/file/f30eb57dbf57eb46d865f.jpg",
+    "https://telegra.ph/file/228dbb2b39a04f527b395.jpg",
+    "https://telegra.ph/file/e51819c35ac9b76037fce.jpg",
+    "https://telegra.ph/file/f17ef460d110a1a74aa17.jpg",
+    "https://telegra.ph/file/921622b5a91e1b3f7cf45.jpg",
 ]
 # --------------------------------------------------------------------------------- #
 
@@ -74,7 +74,7 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
         f": {user}",
         fill=None,
         font=font,
-        stroke_fill=(255, 153, 51),
+        stroke_fill=(185, 125, 25),
         stroke_width=6,
     )
 
@@ -85,7 +85,7 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
         f": {id}",
         fill=None,
         font=font,
-        stroke_fill=(255, 255, 255),
+        stroke_fill=(185, 185, 185),
         stroke_width=0,
     )
 
@@ -96,7 +96,7 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
         f": {uname}",
         fill=None,
         font=font,
-        stroke_fill=(0, 128, 0),
+        stroke_fill=(0, 95, 0),
         stroke_width=6,
     )
 
@@ -115,7 +115,7 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
             (center_x - radius - 10, center_y - radius - 10),
             (center_x + radius + 10, center_y + radius + 10),
         ],
-        outline=(255, 153, 51),
+        outline=(185, 125, 25),
         width=25,
     )  # Saffron border
 
@@ -124,7 +124,7 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
             (center_x - radius - 20, center_y - radius - 20),
             (center_x + radius + 20, center_y + radius + 20),
         ],
-        outline=(255, 255, 255),
+        outline=(185, 185, 185),
         width=25,
     )  # White border
 
@@ -133,7 +133,7 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
             (center_x - radius - 30, center_y - radius - 30),
             (center_x + radius + 30, center_y + radius + 30),
         ],
-        outline=(0, 128, 0),
+        outline=(0, 95, 0),
         width=25,
     )  # Green border
 
