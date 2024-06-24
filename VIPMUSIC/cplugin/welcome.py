@@ -1,8 +1,10 @@
 from logging import getLogger
 
 from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFont
-from pyrogram import Client, enums, filters
+from pyrogram import enums, filters
 from pyrogram.types import ChatMemberUpdated, InlineKeyboardButton, InlineKeyboardMarkup
+
+from VIPMUSIC import app
 
 random_photo = [
     "https://telegra.ph/file/f30eb57dbf57eb46d865f.jpg",
@@ -74,7 +76,7 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
         f": {user}",
         fill=None,
         font=font,
-        stroke_fill=(185, 125, 25),
+        stroke_fill=(255, 255, 255),
         stroke_width=6,
     )
 
@@ -85,7 +87,7 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
         f": {id}",
         fill=None,
         font=font,
-        stroke_fill=(185, 185, 185),
+        stroke_fill=(255, 255, 255),
         stroke_width=0,
     )
 
@@ -96,7 +98,7 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
         f": {uname}",
         fill=None,
         font=font,
-        stroke_fill=(0, 95, 0),
+        stroke_fill=(255, 255, 255),
         stroke_width=6,
     )
 
@@ -115,8 +117,8 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
             (center_x - radius - 10, center_y - radius - 10),
             (center_x + radius + 10, center_y + radius + 10),
         ],
-        outline=(185, 125, 25),
-        width=25,
+        outline=(255, 255, 255),
+        width=10,
     )  # Saffron border
 
     draw.ellipse(
@@ -124,8 +126,8 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
             (center_x - radius - 20, center_y - radius - 20),
             (center_x + radius + 20, center_y + radius + 20),
         ],
-        outline=(185, 185, 185),
-        width=25,
+        outline=(255, 255, 255),
+        width=10,
     )  # White border
 
     draw.ellipse(
@@ -133,21 +135,21 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
             (center_x - radius - 30, center_y - radius - 30),
             (center_x + radius + 30, center_y + radius + 30),
         ],
-        outline=(0, 95, 0),
-        width=25,
+        outline=(255, 255, 255),
+        width=10,
     )  # Green border
 
     background.save(f"downloads/welcome#{id}.png")
     return f"downloads/welcome#{id}.png"
 
 
-@Client.on_message(filters.command("welcome") & ~filters.private)
-async def auto_state(client: Client, message):  # Added 'message' as a parameter
+@app.on_message(filters.command("welcome") & ~filters.private)
+async def auto_state(_, message):
     usage = "**ᴜsᴀɢᴇ:**\n**⦿ /welcome [on|off]**"
     if len(message.command) == 1:
         return await message.reply_text(usage)
     chat_id = message.chat.id
-    user = await client.get_chat_member(message.chat.id, message.from_user.id)
+    user = await app.get_chat_member(message.chat.id, message.from_user.id)
     if user.status in (
         enums.ChatMemberStatus.ADMINISTRATOR,
         enums.ChatMemberStatus.OWNER,
@@ -176,12 +178,10 @@ async def auto_state(client: Client, message):  # Added 'message' as a parameter
         await message.reply("**sᴏʀʀʏ ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇɴᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ!**")
 
 
-@Client.on_chat_member_updated(filters.group, group=-3)
-async def greet_new_member(
-    client: Client, member: ChatMemberUpdated
-):  # Added 'client' and 'member' as parameters
+@app.on_chat_member_updated(filters.group, group=-8)
+async def greet_new_member(_, member: ChatMemberUpdated):
     chat_id = member.chat.id
-    count = await client.get_chat_members_count(chat_id)
+    count = await app.get_chat_members_count(chat_id)
     A = await wlcm.find_one(chat_id)
     if A:
         return
@@ -192,7 +192,7 @@ async def greet_new_member(
     if member.new_chat_member and not member.old_chat_member:
 
         try:
-            pic = await client.download_media(
+            pic = await app.download_media(
                 user.photo.big_file_id, file_name=f"pp{user.id}.png"
             )
         except AttributeError:
@@ -208,9 +208,9 @@ async def greet_new_member(
             )
             button_text = "๏ ᴠɪᴇᴡ ɴᴇᴡ ᴍᴇᴍʙᴇʀ ๏"
             add_button_text = "๏ ᴋɪᴅɴᴀᴘ ᴍᴇ ๏"
-            deep_link = f"{user.id}"
+            deep_link = f"tg://openmessage?user_id={user.id}"
             add_link = f"https://t.me/Forbiddenmusic_bot?startgroup=true"
-            temp.MELCOW[f"welcome-{member.chat.id}"] = await client.send_photo(
+            temp.MELCOW[f"welcome-{member.chat.id}"] = await app.send_photo(
                 member.chat.id,
                 photo=welcomeimg,
                 caption=f"""
@@ -227,10 +227,26 @@ async def greet_new_member(
 """,
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [InlineKeyboardButton(button_text, user_id=deep_link)],
+                        [InlineKeyboardButton(button_text, url=deep_link)],
                         [InlineKeyboardButton(text=add_button_text, url=add_link)],
                     ]
                 ),
             )
         except Exception as e:
-            LOGGER.error(e)
+            return
+
+
+__MODULE__ = "Welcome"
+__HELP__ = """
+## Welcome Module
+
+This module handles welcome messages for new members joining a group.
+
+### Commands:
+- `/welcome [on|off]`: Enable or disable welcome notifications in the group.
+
+### Features:
+- Automatically sends a welcome message when a new member joins the group.
+- Allows admins to enable or disable welcome notifications.
+
+"""
