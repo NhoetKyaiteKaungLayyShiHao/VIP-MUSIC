@@ -1,47 +1,55 @@
-import time
 from datetime import datetime
 
-import psutil
-from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-
-from config import PING_IMG_URL, SUPPORT_CHAT
-from VIPMUSIC.cplugin.utils import StartTime
-from VIPMUSIC.utils import get_readable_time
 
 
-@Client.on_message(filters.command("ping", prefixes=["."]))
-async def ping_clone(client: Client, message: Message):
-    i = await client.get_me()
-    hmm = await message.reply_photo(
-        photo=PING_IMG_URL, caption=f"{i.mention} ɪs ᴘɪɴɢɪɴɢ..."
-    )
-    upt = int(time.time() - StartTime)
-    cpu = psutil.cpu_percent(interval=0.5)
-    mem = psutil.virtual_memory().percent
-    disk = psutil.disk_usage("/").percent
+from pyrogram import filters
+
+from pyrogram.types import Message
+
+
+
+from VIPMUSIC import app
+
+from VIPMUSIC.core.call import VIP
+
+from VIPMUSIC.utils import bot_sys_stats
+
+from VIPMUSIC.utils.decorators.language import language
+
+from VIPMUSIC.utils.inline import supp_markup
+
+from config import BANNED_USERS, PING_IMG_URL
+
+
+
+
+
+@app.on_message(filters.command(["ping", "alive"]) & ~BANNED_USERS)
+
+@language
+
+async def ping_com(client, message: Message, _):
+
     start = datetime.now()
+
+    response = await message.reply_photo(
+
+        photo=PING_IMG_URL,
+
+        caption=_["ping_1"].format(app.mention),
+
+    )
+
+    pytgping = await VIP.ping()
+
+    UP, CPU, RAM, DISK = await bot_sys_stats()
+
     resp = (datetime.now() - start).microseconds / 1000
-    uptime = get_readable_time((upt))
 
-    await hmm.edit_text(
-        f"""➻ ᴩᴏɴɢ : `{resp}ᴍs`
+    await response.edit_text(
 
-<b><u>{i.mention} sʏsᴛᴇᴍ sᴛᴀᴛs :</u></b>
+        _["ping_2"].format(resp, app.mention, UP, RAM, CPU, DISK, pytgping),
 
-๏ **ᴜᴩᴛɪᴍᴇ :** {uptime}
-๏ **ʀᴀᴍ :** {mem}
-๏ **ᴄᴩᴜ :** {cpu}
-๏ **ᴅɪsᴋ :** {disk}""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("❄ sᴜᴘᴘᴏʀᴛ ❄", url=SUPPORT_CHAT),
-                    InlineKeyboardButton(
-                        "✨ 𝙰𝙳𝙳 𝙼𝙴✨",
-                        url=f"https://t.me/{i.username}?startgroup=true",
-                    ),
-                ],
-            ]
-        ),
+        reply_markup=supp_markup(_),
+
     )
