@@ -14,12 +14,12 @@
     "env": {
       "API_ID": {
         "description": "Get this value from https://my.telegram.org",
-        "value": "24795599",
+        "value": "24295642",
         "required": true
       },
       "API_HASH": {
         "description": "Get this value from https://my.telegram.org",
-        "value": "b5bf7b421f0d4d84babda392dcf38e0c",
+        "value": "468557fb93d31569ca2804f2b4ab07ad",
         "required": true
       },
       "BOT_TOKEN": {
@@ -74,7 +74,7 @@
       },
       "LOGGER_ID": {
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
-        "value": "-1002020845157",
+        "value": "-1002011820973",
         "required": true
       }
     },
