@@ -17,6 +17,9 @@ def close_markup(_):
     upl = InlineKeyboardMarkup(
         [
             [
+                 InlineKeyboardButton(
+                text=" ꜱᴜᴘᴘᴏʀᴛ ", url=f"https://t.me/seriousvs_version10"
+            ),
                 InlineKeyboardButton(
                     text=_["CLOSE_BUTTON"],
                     callback_data="close",
