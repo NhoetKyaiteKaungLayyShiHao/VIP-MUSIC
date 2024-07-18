@@ -13,5 +13,5 @@ RUN git clone https://github.com/Zenaku2050s/ZenakuXMusic/root/smdd
 RUN rm -rf /root/smdd/.git
 WORKDIR /root/smdd
 RUN npm install || yarn install
-EXPOSE 8000
+EXPOSE 8080
 CMD bash start
