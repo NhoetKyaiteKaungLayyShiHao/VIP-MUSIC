@@ -47,12 +47,12 @@
         "value": "AQHHpwsAXaBte_2A8B__-bS3B0jY4cSEYbZZWvBqSOEi5pypMRPHD5RBzwnr_JnjKjCKw89ybIHUq1QCM0WoP5UgpdnxGR5ZJAJ3zou4EIbD_SujtkhlTLi3FXYlSKOCK0WIcMW1l7xV38bRMzDXQ3ekqKx6soC96QofZK8S5wBvI_GNvPIw-hza3iKwbETKMjGTq3PiG_1FrPnUNpuWglwI2KFzK-fJXfXen0mja7099X6CdSszcLo-y3uY6boyEVDL7-SX48ZNKJlQAENdwBVyNJipZxv9n6e-8NwQCc05jWrXs4bLk6OX6VCzhOqF4QnMuA-vDpeJWXhEIVeukRo6E-nzOgAAAAG-mt84AA",
         "required": true
       },
-      "KOYEB_API_KEY": {
+      "HEROKU_API_KEY": {
         "description": "Your Heroku account's API key",
         "value": "",
         "required": false
       },
-      "KOYEB_APP_NAME": {
+      "HEROKU_APP_NAME": {
         "description": "Your Heroku account's APP key.",
         "value": "",
         "required": false
