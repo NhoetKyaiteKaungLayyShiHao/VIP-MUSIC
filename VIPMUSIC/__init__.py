@@ -4,14 +4,14 @@ from VIPMUSIC.core.bot import VIP
 from VIPMUSIC.core.dir import dirr
 from VIPMUSIC.core.git import git
 from VIPMUSIC.core.userbot import Userbot
-from VIPMUSIC.misc import dbb, heroku
+from VIPMUSIC.misc import dbb, koyeb
 
 from .logging import LOGGER
 
 dirr()
 git()
 dbb()
-heroku()
+koyeb()
 
 app = VIP()
 api = SafoneAPI()
