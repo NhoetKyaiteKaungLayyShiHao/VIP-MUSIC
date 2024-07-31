@@ -64,74 +64,43 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         bar = "——————————◉"
 
     buttons = [
-        [
+                [
             InlineKeyboardButton(
-                text=_["S_B_5"],
-                url=f"https://t.me/{app.username}?startgroup=true",
-            ),
+                text=f"{played} {bar} {dur}",
+                callback_data="GetTimer",
+            )
         ],
         [
-            InlineKeyboardButton(
-                text="II ᴘᴀᴜsᴇ",
-                callback_data=f"ADMIN Pause|{chat_id}",
-            ),
-            InlineKeyboardButton(text="▢ sᴛᴏᴘ", callback_data=f"ADMIN Stop|{chat_id}"),
-            InlineKeyboardButton(
-                text="sᴋɪᴘ ‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
-            ),
+            InlineKeyboardButton(text="▷ ʀᴇꜱᴜᴍᴇ", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton(text="II ᴘᴀᴜꜱᴇ", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="ꜱᴋɪᴘ ‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
         ],
         [
+            InlineKeyboardButton(text="▢ ꜱᴛᴏᴘ", callback_data=f"ADMIN Stop|{chat_id}"),
             InlineKeyboardButton(
-                text="▷ ʀᴇsᴜᴍᴇ", callback_data=f"ADMIN Resume|{chat_id}"
-            ),
-            InlineKeyboardButton(
-                text="ʀᴇᴘʟᴀʏ ↺", callback_data=f"ADMIN Replay|{chat_id}"
+                text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/seriousvs_version10"
             ),
         ],
-        [
-            InlineKeyboardButton(
-                text="๏ ғᴇᴀᴛᴜʀᴇs ๏",
-                callback_data=f"MainMarkup {videoid}|{chat_id}",
-            ),
-        ],
+        [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
-
     return buttons
 
 
 def stream_markup(_, videoid, chat_id):
     buttons = [
         [
-            InlineKeyboardButton(
-                text=_["S_B_5"],
-                url=f"https://t.me/{app.username}?startgroup=true",
-            ),
+            InlineKeyboardButton(text="▷ ʀᴇꜱᴜᴍᴇ", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton(text="II ᴘᴀᴜꜱᴇ", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="ꜱᴋɪᴘ ‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
         ],
         [
+            InlineKeyboardButton(text="▢ ꜱᴛᴏᴘ", callback_data=f"ADMIN Stop|{chat_id}"),
             InlineKeyboardButton(
-                text="✚ ᴘʟᴀʏʟɪsᴛ", callback_data=f"vip_playlist {videoid}"
-            ),
-            InlineKeyboardButton(
-                text="ᴄᴏɴᴛʀᴏʟs ♻",
-                callback_data=f"Pages Back|3|{videoid}|{chat_id}",
+                text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/seriousvs_version10"
             ),
         ],
-        [
-            InlineKeyboardButton(
-                text="📥 ᴠɪᴅᴇᴏ", callback_data=f"downloadvideo {videoid}"
-            ),
-            InlineKeyboardButton(
-                text="📥 ᴀᴜᴅɪᴏ", callback_data=f"downloadaudio {videoid}"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="๏ ᴀᴅᴠᴀɴᴄᴇ ๏",
-                callback_data=f"Pages Forw|0|{videoid}|{chat_id}",
-            ),
-        ],
+        [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
-
     return buttons
 
 
